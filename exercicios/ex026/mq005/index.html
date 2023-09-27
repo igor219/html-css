@@ -6,8 +6,9 @@
     <title>Media query</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho">
     <header>
         <h1>Meu site</h1>
         <span id="burguer" class="material-icons" onclick="clickMenu()">menu</span>
@@ -29,14 +30,22 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quod tempore exercitationem. Enim, ut aut eveniet natus modi quae ducimus odit necessitatibus officia suscipit, culpa dignissimos ea qui quidem libero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam atque mollitia reiciendis sequi? Ut beatae ipsa autem quisquam, magnam inventore consectetur voluptatum voluptatem quo error dolor aliquid tempore! Aperiam, quibusdam?</p>
         </article>
     </main>
-    <script>
+    <script> 
+        function mudouTamanho(){
+            if (window.innerWidth >= 768){
+                paginas.style.display = 'block'
+            }
+            else {
+                paginas.style.display = 'none'
+            }
+        }
         function clickMenu(){
             if (paginas.style.display == 'block'){
                 paginas.style.display = 'none'
             }
-            else (
+            else {
                 paginas.style.display = 'block'
-            )
+            }
         }
     </script>
 </body>
